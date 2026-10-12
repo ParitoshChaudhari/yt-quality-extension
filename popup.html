@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>YouTube Quality Selector</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header>
+    <img src="icons/icon48.png" alt="" />
+    <div>
+      <h1>YouTube Quality</h1>
+      <p class="subtitle">Auto max / default quality</p>
+    </div>
+  </header>
+
+  <section class="row">
+    <label class="switch">
+      <input type="checkbox" id="enabledToggle" />
+      <span class="slider"></span>
+    </label>
+    <div class="row-text">
+      <strong>Enable auto quality</strong>
+      <span>Applies automatically to every video</span>
+    </div>
+  </section>
+
+  <section class="field">
+    <label for="qualitySelect">Default quality</label>
+    <select id="qualitySelect"></select>
+    <p class="hint" id="qualityHint">If a video doesn't have this quality, the closest lower one available will be used. HDR and 60fps variants are detected automatically per video.</p>
+  </section>
+
+  <section class="status">
+    <div class="status-row">
+      <span>Current video quality</span>
+      <strong id="currentQuality">—</strong>
+    </div>
+    <div class="status-row">
+      <span>Available for this video</span>
+      <strong id="availableQualities">—</strong>
+    </div>
+    <button id="applyNowBtn" class="secondary-btn">Apply to current video now</button>
+  </section>
+
+  <footer>
+    <span id="savedMsg" class="saved-msg"></span>
+    <span class="footer-note">Settings save automatically · No data collected</span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
